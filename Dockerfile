@@ -2,10 +2,8 @@ FROM node:14.0.0
 
 WORKDIR /usr/src/app
 
-# COPY ["package.json", "./"]
+COPY . .
 
 RUN npm install
 
-COPY . .
-
-# ENTRYPOINT [ "npm", "start" ]
+ENTRYPOINT [ "npm", "start" ]
